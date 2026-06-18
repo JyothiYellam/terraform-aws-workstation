@@ -1,6 +1,7 @@
 resource "aws_instance" "workstation" {
   ami           = local.ami_id
   instance_type = "t3.micro"
+  subnet_id = "subnet-05742c19146f7b1f0"
   vpc_security_group_ids = [aws_security_group.workstation.id]
   user_data = templatefile("workstation.sh", {
     aws_access_key = var.aws_access_key
