@@ -1,4 +1,4 @@
-data "aws_ami" "rhel9"
+data "aws_ami" "rhel9" {
   most_recent      = true
   owners           = ["973714476881"]
 
