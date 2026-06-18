@@ -51,6 +51,9 @@ resource "aws_security_group" "workstation" {
   name        = "allow-all-workstation" # this is for AWS account
   description = "Allow TLS inbound traffic and all outbound traffic"
 
+
+  vpc_id = "vpc-0fbd6f6e92597a946"
+
   egress {
     from_port        = 0
     to_port          = 0
